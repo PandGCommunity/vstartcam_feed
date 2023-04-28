@@ -1,0 +1,6 @@
+config SND_SOC_RT5350F_WM8988
+	tristate "ASoC Audio driver for Ralink SoC with WM8988 codec"
+	depends on SND_RALINK_SOC_I2S && I2C
+	select SND_SOC_WM8988
+	help
+	  Say Y if you want to use WM8988 codec on Ralink/MediaTek based boards.
