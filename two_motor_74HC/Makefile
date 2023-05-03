@@ -44,21 +44,21 @@ include $(INCLUDE_DIR)/package.mk
 include $(INCLUDE_DIR)/cmake.mk
 
 define Package/$(PKG_NAME)
-    SECTION:=pandgc
-    CATEGORY:=PandGCommunity
-    SUBMENU:=Utils
-    TITLE:=VSTARTCAM MOTOR DRIVER
-    MAINTAINER:=s.sharshunov@gmail.com
-    DEPENDS:=@(TARGET_ramips_rt305x_DEVICE_rt5350f-t7838wip)
+	SECTION:=pandgc
+	CATEGORY:=PandGCommunity
+	SUBMENU:=Utils
+	TITLE:=VSTARTCAM MOTOR DRIVER
+	MAINTAINER:=s.sharshunov@gmail.com
+	DEPENDS:=@(TARGET_ramips_rt305x_DEVICE_rt5350f-t7838wip)
 endef
 
 define Package/$(PKG_NAME)/description
-    Vstartcam motor driver
+	Vstartcam motor driver
 endef
 
 define Package/$(PKG_NAME)/install
-    $(INSTALL_DIR) $(1)/usr/bin
-    $(INSTALL_BIN) $(PKG_BUILD_DIR)/$(PKG_NAME) $(1)/usr/bin/
+	$(INSTALL_DIR) $(1)/usr/bin
+	$(INSTALL_BIN) $(PKG_BUILD_DIR)/$(PKG_NAME) $(1)/usr/bin/
 endef
 
 $(eval $(call BuildPackage,$(PKG_NAME)))
