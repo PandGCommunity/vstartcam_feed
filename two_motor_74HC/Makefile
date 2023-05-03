@@ -1,20 +1,3 @@
-include $(TOPDIR)/rules.mk
-#Based on adb package from AUR https://aur.archlinux.org/packages/adb/ , reused Makefile
-
-PKG_NAME:=two_motor_74HC
-PKG_VERSION:=0.0.3
-PKG_RELEASE:=1
-
-PKG_SOURCE_PROTO:=git
-PKG_SOURCE_URL:=https://android.googlesource.com/platform/system/core
-PKG_SOURCE_VERSION:=6fe92d1a3fb17545d82d020a3c995f32e6b71f9d
-PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_SOURCE_VERSION)
-PKG_SOURCE:=$(PKG_SOURCE_SUBDIR).tar.xz
-PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_SOURCE_SUBDIR)
-PKG_MAINTAINER:=Henryk Heisig <hyniu@o2.pl>
-
-
-https://github.com/PandGCommunity/two_motor_74HC.git
 #
 # Copyright (C) 2011-2014 OpenWrt.org
 #
@@ -33,12 +16,11 @@ PKG_LICENSE_FILES:=LICENSE
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=https://github.com/PandGCommunity/two_motor_74HC.git
-PKG_SOURCE_VERSION:=39987411f913ca905773f7f1a48054486a677487
+PKG_SOURCE_VERSION:=main
 
 PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)-$(PKG_SOURCE_VERSION)
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION)-$(PKG_SOURCE_VERSION).tar.gz
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)-$(PKG_SOURCE_VERSION)
-# PKG_BUILD_DEPENDS:=hisi-osdrv2
 
 include $(INCLUDE_DIR)/package.mk
 include $(INCLUDE_DIR)/cmake.mk
