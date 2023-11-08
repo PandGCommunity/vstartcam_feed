@@ -28,7 +28,11 @@ script; if not, please visit http://www.gnu.org/copyleft/gpl.html for more infor
 Software
 ========
 
+* libsrtp        =>
+* libsrtp2       =>
+* pjproject      =>
 * rt5350f-wm8988 =>
+* two_motor_74HC =>
 
 
 Usage
